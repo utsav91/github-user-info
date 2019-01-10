@@ -1,9 +1,12 @@
 import React from "react";
+import Grid from "@material-ui/core/Grid";
 import Card from "./Card";
 
 const CardList = props => {
   return (
-    <div>{props.cards && props.cards.map(card => <Card {...card} />)}</div>
+    <Grid container>
+      {props.cards && props.cards.map(card => <Card {...card} />)}
+    </Grid>
   );
 };
 
